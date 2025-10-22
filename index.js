@@ -4,7 +4,7 @@ let photosArray=[];
 
 //unspalsh API
 const count=10;
-const apikey='API_KEY';
+const apiKey='O4SB1nQ1MHtLa9rZeFZyZavrqD43AJjVynDOimmv4Yk';
 const apiUrl =`https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
 //creat element for links and photos,add to DOM
@@ -31,11 +31,11 @@ async function getPhotos()
     try{
         const response=await fetch(apiUrl);
         photosArray =await response.json();
-        console.log(photosArray);
+       displayPhotos();
     
     }
     catch(error){
 
     }
 }
-getphotos();
+getPhotos();
